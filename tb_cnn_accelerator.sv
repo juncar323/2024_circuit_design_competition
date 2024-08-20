@@ -36,15 +36,15 @@ reg [7:0] data_mem_5 [0 : 883];
 reg [7:0] data_mem_6 [0 : 883];
 
 initial begin 
-   $readmemh("/Xilinx/close_223.txt", data_mem_1);
+   $readmemh("/Xilinx/close_1.txt", data_mem_1);
 end
 
 initial begin 
-   $readmemh("/Xilinx/close_3.txt", data_mem_2);
+   $readmemh("/Xilinx/close_2.txt", data_mem_2);
 end
 
 initial begin 
-   $readmemh("/Xilinx/close_4.txt", data_mem_3);
+   $readmemh("/Xilinx/close_3.txt", data_mem_3);
 end
 
 initial begin 
@@ -52,11 +52,11 @@ initial begin
 end
 
 initial begin 
-   $readmemh("/Xilinx/close_219.txt", data_mem_5);
+   $readmemh("/Xilinx/close_4.txt", data_mem_5);
 end
 
 initial begin 
-   $readmemh("/Xilinx/close_33.txt", data_mem_6);
+   $readmemh("/Xilinx/close_5.txt", data_mem_6);
 end
 
 initial begin

@@ -8,11 +8,30 @@ input valid_in,
     output reg valid_out 
 );
 
-    always @(*) begin
-        valid_out = valid_in;
-    end
+wire [31:0] sum;
+reg [31:0] fa_a = in;
+reg [31:0] fa_b;
+
+fa add_inst_l (
+    .a(fa_a),
+    .b(fa_b),
+    .clk(clk),
+    .sum(sum),
+    .valid(fa_valid_d),
+    .v(fa_valid)
+);
     
-    always@(*) begin
-        assign out = {~in[31], in[30:0]};
+    always@(posedge clk or rst_n) begin
+        if(valid_in) begin
+            fa_a <= in;
+            fa_b <= 32'h3f8ccccd;
+        end
+        if(fa_valid_d) begin
+            out <= {~sum[31], sum[30:0]};
+            valid_out <= 1;
+        end
+        if(valid_out)begin
+            valid_out <= 0;
+        end
     end
 endmodule

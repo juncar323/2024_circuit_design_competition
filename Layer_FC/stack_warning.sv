@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 module stack_warning #(
-SLEEPTIME = 240
+SLEEPTIME = 120
 )(
 input clk,
 input valid_in,

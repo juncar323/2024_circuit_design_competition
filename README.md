@@ -4,3 +4,4 @@
 
 - Project Name : CNN-Based Drowsy Driving Detection System Using Verilog HDL
 
+- Design Summary : 
